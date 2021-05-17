@@ -524,8 +524,13 @@ class juego extends Phaser.Scene {
 		var dirBala = new Phaser.Math.Vector2( Math.cos((b.angle+90)*Math.PI/180), Math.sin((b.angle+90)*Math.PI/180));
 		dirBala.normalize();
 
-		b.setVelocityX(-500*dirBala.x);
-		b.setVelocityY(-500*dirBala.y);
+		b.setVelocityX(-1000*dirBala.x);
+		b.setVelocityY(-1000*dirBala.y);
+
+		b.body.velocity.x += this.tanque.body.velocity.x/1.5
+		b.body.velocity.y += this.tanque.body.velocity.y/1.5
+
+		//console.log(b)
 
 		b.setSize(14,14);
 
