@@ -414,7 +414,7 @@ class juego extends Phaser.Scene {
 		else if (this.tanque.animado == 0)
 		{
 			//console.log('idle')
-			this.tanque.anims.play('idle');
+			this.tanque.anims.stop('idle');
 		}
 		
 
